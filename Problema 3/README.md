@@ -7,7 +7,8 @@ Para la realizacion del problema 3 se realizaron las siguientes clases:
 ![image](https://user-images.githubusercontent.com/69942635/113466795-b18fd580-93fb-11eb-8461-d456374d2529.png)
 
 ## Clase HiloGenerarNave
-Es una clase Thread que consiste en generar Naves enemigas de manera random en lo alto de la pantalla del juego. esta clase se ejecuta de manera paralela.              
+Es una clase Thread que consiste en generar Naves enemigas de manera random en lo alto de la pantalla del juego. esta clase se ejecuta de manera paralela.    
+***
 las variables globales estaticas:
 * juegoEmpezado: la cual hace que el hilo pueda seguir transcuriendo de manera normal.
 * totalNaves: la cantidad total de naves en el tablero.
@@ -17,7 +18,9 @@ las variables globales estaticas:
 ![image](https://user-images.githubusercontent.com/69942635/113467019-84dcbd80-93fd-11eb-83d3-3c11bf0bf641.png)
 ## Clase HiloBalaJugador
 es una clase Thread que consiste en mover todas las balas de los jugadores hacia las naves enemigas. esta clase se ejecuta de manera paralela y concurente.
+***
 se dio la situacion de un deadlocks debido a que se creaban al mismo tiempo 2 balas, se arreglo dando un limite de disparo entre disparos.
+***
 las variables globales estaticas:
 * juegoEmpezado: la cual hace que el hilo pueda seguir transcuriendo de manera normal.
 * totalNaves: la cantidad total de naves en el tablero.
