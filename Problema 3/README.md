@@ -39,4 +39,15 @@ las variables globales estaticas:
 * jugador1: es el jugador 1.
 * jugador2: es el jugador 2.
 ![image](https://user-images.githubusercontent.com/69942635/113468866-3122a200-9406-11eb-9819-a5a7bbdbcafc.png)
+## Clase HiloJugador
+Es una clase Thread que consiste en esperar las pulsaciones del teclado para mover los jugadores en la pantalla. esta clase se ejecuta de manera paralela.
+***
+las variables globales estaticas:
+* juegoEmpezado: la cual hace que el hilo pueda seguir transcuriendo de manera normal.
+* jugador1: es el jugador 1.
+* jugador2: es el jugador 2.
+![image](https://user-images.githubusercontent.com/69942635/113469146-895aa380-9408-11eb-9b83-50cd308462ce.png)
+![image](https://user-images.githubusercontent.com/69942635/113469162-af804380-9408-11eb-80e5-74a5f173d82e.png)
+## Clase HiloNave
+Es una clase Thread que consiste en mover las naves enemigas de derecha a izquierda
 
