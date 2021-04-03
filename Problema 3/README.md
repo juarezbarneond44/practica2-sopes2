@@ -49,5 +49,17 @@ las variables globales estaticas:
 ![image](https://user-images.githubusercontent.com/69942635/113469146-895aa380-9408-11eb-9b83-50cd308462ce.png)
 ![image](https://user-images.githubusercontent.com/69942635/113469162-af804380-9408-11eb-80e5-74a5f173d82e.png)
 ## Clase HiloNave
-Es una clase Thread que consiste en mover las naves enemigas de derecha a izquierda
+Es una clase Thread que consiste en mover las naves enemigas de derecha a izquierda y hacia abajo. esta clase se ejecuta de manera paralela.
+***
+las variables globales estaticas:
+* juegoEmpezado: la cual hace que el hilo pueda seguir transcuriendo de manera normal.
+* naves: arreglo de las naves enemigas.
+![image](https://user-images.githubusercontent.com/69942635/113469268-8b713200-9409-11eb-9306-6187ea3a6c99.png)
+## Clase HiloTiempo
+Es una clase Thread que consiste en espera 25 segundos y hacer que la velocidad de las naves y su aparicion se realice de manera mas rapida. esta clase se ejecuta de manera paralela.
+las variables globales estaticas:
+* juegoEmpezado: la cual hace que el hilo pueda seguir transcuriendo de manera normal.
+* velocidadAparicionNave: velocidad con la cual las naves se mueven y aparecen mas rapido.
+![image](https://user-images.githubusercontent.com/69942635/113469279-9f1c9880-9409-11eb-8b7f-b6b4f732355b.png)
+
 
