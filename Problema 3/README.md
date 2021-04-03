@@ -46,6 +46,7 @@ las variables globales estaticas:
 * juegoEmpezado: la cual hace que el hilo pueda seguir transcuriendo de manera normal.
 * jugador1: es el jugador 1.
 * jugador2: es el jugador 2.
+***
 ![image](https://user-images.githubusercontent.com/69942635/113469146-895aa380-9408-11eb-9b83-50cd308462ce.png)
 ![image](https://user-images.githubusercontent.com/69942635/113469162-af804380-9408-11eb-80e5-74a5f173d82e.png)
 ## Clase HiloNave
