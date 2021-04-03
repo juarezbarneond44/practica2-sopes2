@@ -62,5 +62,15 @@ las variables globales estaticas:
 * juegoEmpezado: la cual hace que el hilo pueda seguir transcuriendo de manera normal.
 * velocidadAparicionNave: velocidad con la cual las naves se mueven y aparecen mas rapido.
 ![image](https://user-images.githubusercontent.com/69942635/113469279-9f1c9880-9409-11eb-8b7f-b6b4f732355b.png)
+## Clase Jugador
+![image](https://user-images.githubusercontent.com/69942635/113469332-fb7fb800-9409-11eb-81ef-3ceb52e41ba1.png)
+## Clase Nave
+![image](https://user-images.githubusercontent.com/69942635/113469347-0e928800-940a-11eb-8165-2b9c58bfaf5f.png)
+## Clase Panel
+es una clase donde se realizan todas las instancias de las variables globales estaticas  y donde se inician los hilos de toda la aplicacion.
+![image](https://user-images.githubusercontent.com/69942635/113469361-24a04880-940a-11eb-9cc2-84f70c10a6a2.png)
+## Clase Ventana
+es una clase donde se llenan los arreglos de las naves enemigas, se crean las instancias de los jugadores y tiene un metodo donde captura las pulsaciones del teclado para mover al jugador. esta clase actua en forma paralela con las demas.
+![image](https://user-images.githubusercontent.com/69942635/113469392-5fa27c00-940a-11eb-9190-a3419f672620.png)
 
 
