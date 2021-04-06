@@ -10,7 +10,7 @@ Concurrentemente todos los hilos iniciados quieren ser los dueños del bloqueo p
 ## Cómo se realizó la comunicación y sincronización entre procesos.
 Ambos procesos interactuan con la bódega, en este proceso se lleva de forma armonioza de la siguiente manera:
 
-**Productor: **
+**Productor:**
 *Si* encuentra un lugar vacío en la bódega, realiza su donación y se retira
 *Sino*, espera a que se encuentre un espacio vacío.
 
