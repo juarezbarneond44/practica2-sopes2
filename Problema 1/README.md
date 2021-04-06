@@ -5,7 +5,7 @@
 Se inician todos los hilos (dejando un intervalo de 2 segundos entre el inicio de cada hilo).
 
 #### Concurrencia
-Concurrentemente todos los hilos iniciados quieren ser los dueños del bloqueo proporcionado por el reentrantlock pero solo 1 hilo puede a la vez.
+Al iniciarse los hilos, cuando existe una cola de pendientes y el otro proceso manda un signalAll(), estos hilos pendientes quieren ser los dueños del bloqueo proporcionado por el reentrantlock pero solo 1 hilo puede ser dueño a la vez.
 
 ## Cómo se realizó la comunicación y sincronización entre procesos.
 Ambos procesos interactuan con la bódega, en este proceso se lleva de forma armonioza de la siguiente manera:
