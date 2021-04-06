@@ -1,11 +1,9 @@
 # Centro de Acopio
 
 ## Partes del programa en donde existieron múltiples procesos trabajando de forma concurrente y/o paralela.
-#### Paralela
-Se inician todos los hilos (dejando un intervalo de 2 segundos entre el inicio de cada hilo).
 
-#### Concurrencia
-Al iniciarse los hilos, cuando existe una cola de pendientes y el otro proceso manda un signalAll(), estos hilos pendientes quieren ser los dueños del bloqueo proporcionado por el reentrantlock pero solo 1 hilo puede ser dueño a la vez.
+#### Concurrente
+Al iniciarse los hilos dentro del for puede llegar a existir una cola de pendientes y el otro proceso manda un signalAll(), estos hilos pendientes quieren ser los dueños del bloqueo proporcionado por el reentrantlock pero solo 1 hilo puede ser dueño a la vez.
 
 ## Cómo se realizó la comunicación y sincronización entre procesos.
 Ambos procesos interactuan con la bódega, en este proceso se lleva de forma armonioza de la siguiente manera:
@@ -21,9 +19,9 @@ Ambos procesos interactuan con la bódega, en este proceso se lleva de forma arm
 **Sincronización**
 Al inicio, se genera una cantidad de hilos determinada, en nuestro caso en especifico 100 hilos, cada hilo ejecutará una función, esta puede ser de tipo "Productor" (Agrgando una donación a la bódega) o "Consumidor" (Retirando una doncación de la bódega) según la probabilidad indicada la cual es por defecto 0.5 y 0.5.
 
-Estos 100 procesos tratan de interactuar con la "bódega", la sincronización sucede dado que un proceso ya sea el de agregar o retirar de la bódega se ejecuta, al iniciarse este proceso se bloquea la posibilidad de que algo acceda a los metodos donde este lock este presente, en nuestro programa esto bloqueará la interacción en el "insertar" y "eliminar".
+Estos 100 procesos tratan de interactuar con la "bódega", la sincronización sucede dado que un proceso ya sea el de agregar o retirar de la bódega se ejecuta, al iniciarse este proceso se bloquea la posibilidad de que algo acceda a los metodos donde este lock este presente, en nuestro programa esto bloqueará la interacción en el "insertarBodega" y "sacarDeBodega".
 
-Entonces, al entrar en insertarBodega o sacarDeBodega, los demás no podrán ni insertar, ni eliminar hasta que el proceso termine, antes de terminar, en insertarBodega el productor avisa a los consumidores por medio del signalAll, por lo que estos hilos se despiertan y uno de ellos procede a ejecutarse, esto mismo sucede hacia los productores en el sacarDeBodega, antes de finalizar se le avisa a los productores para que estos puedan insertar en la bódega.
+Entonces, al entrar en "insertarBodega" o "sacarDeBodega", los demás no podrán ni insertar, ni eliminar hasta que el proceso termine, antes de terminar, en "insertarBodega" el productor avisa a los consumidores por medio del signalAll(), por lo que estos hilos se despiertan y uno de ellos procede a ejecutarse, esto mismo sucede hacia los productores en el "sacarDeBodega", antes de finalizar se le avisa a los productores para que estos puedan insertar en la bódega.
 
 
 ## Situaciones en las cuáles era posible que se dieran: deadlocks, livelocks, condiciones de carrera
